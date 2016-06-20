@@ -17,7 +17,7 @@ public class JavaApplication90 {
     public static void main(String[] args) {
         System.out.println("primer repositorio");
         System.out.println("Primera modificación");
-        System.out.println("Primera modificación desde Git")
+        System.out.println("Primera modificación desde Git");
     }
     
 }
