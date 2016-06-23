@@ -24,28 +24,23 @@ public class Lambas {
         List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9);
         //Encontrar números pares y guardarlos en un array
         List<Integer> numPares = new ArrayList<>();
-        /*
-        //funcional, declarativo. Que quiero hacer?
-        numPares = numeros.stream()
-                .filter(Lambas::esPar)
-                .collect(Collectors.toList());
-        
-        //funcional con lambdas
-        numPares = numeros.stream()
-                .filter( n -> n  % 2 == 0)
-                .collect(Collectors.toList());
-              
-                
-        
-        
-        //imperativa tradicional como lo voy a hacer?
-        for(int i=0; i<numeros.size(); i++)
-            if( numeros.get(i)%2 == 0 )
-                numPares.add(numeros.get(i));
-        */ 
-        for(Integer i:numeros)
-            if(i % 2 == 0)
-                numPares.add(i);
+         /*
+         //funcional, declarativo. Que quiero hacer?
+         numPares = numeros.stream()
+         .filter(Lambas::esPar)
+         .collect(Collectors.toList());
+         //funcional con lambdas
+         numPares = numeros.stream()
+         .filter( n -> n  % 2 == 0)
+         .collect(Collectors.toList());
+         //imperativa tradicional como lo voy a hacer?
+         for(int i=0; i<numeros.size(); i++)
+         if( numeros.get(i)%2 == 0 )
+         numPares.add(numeros.get(i));
+          */
+         numeros.stream().filter((i) -> (i % 2 == 0)).forEach((i) -> {
+             numPares.add(i);
+         });
                 
         System.out.println(numPares);
     }
